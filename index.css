@@ -1,0 +1,139 @@
+body{
+    min-height: 300px;
+    background: linear-gradient(rgb(86, 65, 239), rgb(149, 92, 246));
+}
+header{
+    width:100%;
+    height:100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+header #container{
+    background-color: antiquewhite;
+    border-radius: 10px;
+    width:100%;
+    min-width: 900px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 20px;
+}
+
+header #pageTitle{
+    float: left;
+    padding-left: 30px;
+    width:100%;
+    white-space: nowrap;
+}
+
+header #voidSection{
+    width: 800px;
+    min-width: 200px;
+}
+
+header #searchSection{
+    width: 300px;
+    background-color: grey;
+    border-radius: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header #searchSection #search{
+    width: 80%;
+    height: 30px;
+    border: none;
+    margin-left: 9px;
+    border-radius: 10px 0px 0px 10px;
+}
+
+header #searchSection #search:focus{
+    outline:none;
+}
+
+header #searchSection #searchButton{
+    padding-bottom: 3px;
+    height: 32px;
+    border-radius: 0px 10px 10px 0px;
+    border: 0px;
+}
+
+header #sortBy{
+    width: 100%;
+    height: 30%;
+}
+
+.contents{
+    width:100%;
+    text-align: -webkit-center;
+}
+
+.contents #contents_container{
+    width:100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+}
+
+.card{
+    background-color: rgb(188, 171, 250);
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width:25%;
+    min-width: 300px;
+    min-height: 400px;
+    box-shadow: 3px 3px 20px;
+    position:relative;
+}
+
+.card :hover{
+    cursor: pointer;
+}
+
+.card #cardContainer{
+    padding-top: 30px;
+    padding-bottom:30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transition-duration: 0.3s;
+}
+
+.card #cardContainer:hover{
+    transform: scale(1.05); 
+    transition-duration: 0.5s;
+}
+
+
+
+.card p{
+    width:100%;
+}
+
+.card #title{
+    font-size: 25px;
+}
+
+.card #posterImg{
+    border-radius: 10px;
+    width:250px;
+    height: auto;
+}
+
+.card .starContainer{
+    width: 100%;
+    position:absolute; 
+    bottom:10px;
+}
+
+.card svg[id^=star]{
+    width:30px;
+    height: auto;
+}
