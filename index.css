@@ -132,8 +132,3 @@ header #sortBy{
     position:absolute; 
     bottom:10px;
 }
-
-.card svg[id^=star]{
-    width:30px;
-    height: auto;
-}
