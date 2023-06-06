@@ -1,109 +1,247 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
-    padding: 20px;
+  /* font-family: Arial, sans-serif; */
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
 }
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 24px;
+  font-weight: bold;
 }
 .back-button {
-    background-color: #555;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
+  background-color: #555;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
 }
 .container {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .poster {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 .poster img {
-    width: 200px;
-    height: 300px;
+  width: 200px;
+  height: 300px;
 }
 .details {
-    flex: 1;
+  flex: 1;
 }
 h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
 }
 .genres {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .genres span {
-    background-color: #555;
-    padding: 5px 10px;
-    margin-right: 10px;
-    font-size: 14px;
-    border-radius: 4px;
+  background-color: #555;
+  padding: 5px 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  border-radius: 4px;
 }
 .trailer {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .trailer iframe {
-    width: 100%;
-    height: 400px;
+  width: 100%;
+  height: 400px;
 }
 .cast {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
 }
 .actor {
-    width: 100px;
-    height: 100px;
-    background-color: #555;
-    margin-right: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: #555;
+  margin-right: 10px;
 }
 .comments {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .comments .comment {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #222;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #222;
 }
 .comments .comment p {
-    margin: 0;
+  margin: 0;
 }
 .comments .comment .username {
-    color: #aaa;
-    font-weight: bold;
+  color: #aaa;
+  font-weight: bold;
 }
 .comments .comment .timestamp {
-    color: #aaa;
-    font-size: 12px;
+  color: #aaa;
+  font-size: 12px;
 }
 .comment-form {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .comment-form textarea {
-    width: 100%;
-    height: 100px;
+  width: 100%;
+  height: 100px;
 }
 .comment-form button {
-    background-color: #555;
-    color: #fff;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
+  background-color: #555;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* specTitle */
+/* 원래 상세 페이지 */
+/* .container {
+  position: relative;
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px !important;
+  border-radius: 0.5px;
+} */
+.second-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  border-radius: 0.5px;
+}
+.second-text {
+  padding-left: 40px;
+  margin-top: 200px;
+}
+.second-title {
+  /* font-size: 2px; */
+  font-weight: 600;
+  margin-bottom: px;
+}
+.watch-btn {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8px;
+  color: #fff;
+}
+.details > h2,
+.cast {
+  margin: 70px;
+}
+
+/* 새 상세 페이지 */
+/* *,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.span {
+  color: white;
+}
+
+.heading {
+  /* color: var(--white); */
+  font-size: 40px;
+  font-weight: bolder;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+  padding-bottom: 10px;
+}
+
+.rating {
+  padding-bottom: 10px;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.btn {
+  color: white;
+  /* font-size: 1.5px; */
+  font-weight: bold;
+  max-width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-block: 12px;
+  padding-inline: 20px 24px;
+  border-radius: 8px;
+  transition: 250ms ease;
+  text-decoration: none;
+}
+
+.container {
+  position: relative;
+  background-color: hsla(349, 69%, 51%, 1);
+  color: on surface;
+  padding: 24px 20px 48px;
+  /* height: calc(100vh - 96px);
+  overflow-y: overlay; */
+  z-index: 1;
+}
+
+/* 등장인물 하단 */
+.container::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 150px;
+  background-image: linear-gradient(hsla(250, 13%, 11%, 0));
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 별 모양 */
+.star {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background-image: url(./assets/star.png);
+}
+/* 평점 글자 크기 */
+.vote {
+  font-size: 22px;
+}
+
+/* 별 모양 채우기 */
+.filled {
+  background-position: 0 0;
+}
+.half-filled {
+  background-position: -20px 0;
+}
+
+.overview {
+  font-size: 20px;
 }
