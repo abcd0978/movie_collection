@@ -82,7 +82,7 @@ async function getMovies(){
 }
 
 function cardOnClick(id){
-    alert(`영화 id:${id}`);
+    window.location.href = `http://localhost:5500/spec.html?id=${id}`
 }
 function strToHtml(str){
     const parser = new DOMParser();
