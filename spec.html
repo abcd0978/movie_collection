@@ -2,12 +2,12 @@
 <html lang="ko">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="spec.css">
-  <link rel="stylesheet" href="reset.css">
-  <title>영화 제목 - Netflix</title>
-  <script type="text/javascript"  src="./specModule/spec.js"></script>
-  <script type="module" src="./specModule/spec.js"></script>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="spec.css">
+    <link rel="stylesheet" href="reset.css">
+    <title>영화 제목 - Netflix</title>
+  <!-- <script src="./specmodules/spec.js" type="module"></script>-->
+
 </head>
 
 <body>
@@ -35,27 +35,32 @@
 
       </div>
     </section>
-
-  <section class="comment_section">
-    <h2>댓글</h2>
-    <div class="comments">
-        <div class="comment">
-          <p class="username">사용자1</p>
-          <p class="timestamp">2023-06-05 12:34:56</p>
-          <p>첫 번째 댓글입니다.</p>
-        </div>
-        <div class="comment">
-            <p class="username">사용자2</p>
-            <p class="timestamp">2023-06-05 13:00:00</p>
-            <p>두 번째 댓글입니다.</p>
-        </div>
-    </div>
-    <h3>댓글 작성</h3>
     <div class="comment-form">
-      <textarea placeholder="댓글을 작성하세요"></textarea>
+      <input type="text" class="author-input" placeholder="작성자 이름"><input type="password" class="password-input" placeholder="비밀번호">
+      <textarea placeholder="리뷰를 작성하세요"></textarea>
+      
+      <select class="rating-input">
+        <option value="1">⭐️</option>
+        <option value="2">⭐️⭐️</option>
+        <option value="3">⭐️⭐️⭐️</option>
+        <option value="4">⭐️⭐️⭐️⭐️</option>
+        <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
+      </select>
       <button>작성</button>
     </div>
-  </section>
+    
+    </section>
+
+    <div class="comments">
+        <div class="comment">
+            <p class="username">홍길동</p>
+            <p class="timestamp">2023-06-05 12:34:56</p>
+            <p>너무 재미있습니다!</p>
+            <button class="edit-button" data-comment-id="1">수정</button>
+            <button class="delete-button">삭제</button>
+        </div>
+    </div>
 </body>
 <script type="module" src="./specModules/spec.js"></script>
 </html>
+
