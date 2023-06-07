@@ -1,9 +1,10 @@
 import { getVideoLink,getDetails } from "./video.js";
+import {getMovieCredits} from "./specPeople.js"
 window.onload= async function(){
-    let trailerDiv = document.getElementsByClassName('trailer')[0];
     const URLSearch = new URLSearchParams(location.search);
     const movieId = URLSearch.get('id');
-    
+    await getMovieCredits(movieId)
+    let trailerDiv = document.getElementsByClassName('trailer')[0];
     let iFrameHtml = await getVideoLink(movieId);
     let movieDetails = await getDetails(movieId);
     trailerDiv.appendChild(iFrameHtml)
@@ -11,6 +12,9 @@ window.onload= async function(){
     const overview  = document.getElementById("movieOverview")
     overview.textContent = movieDetails.overview
 }
+
+
+
 let index = 0;
 function typing(id,str,time){
     const content = str
