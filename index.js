@@ -1,43 +1,43 @@
-window.onload = async function(){
+window.onload = async function () {
     const resultJson = await getMovies();
 
-    document.getElementById('searchForm').addEventListener('submit',(e)=>{//검색
+    document.getElementById('searchForm').addEventListener('submit', (e) => {//검색
         e.preventDefault()
         const value = document.getElementById('search').value
-        searchCards(value,resultJson.results)
+        searchCards(value, resultJson.results)
     })
 
-    document.getElementById('sortBy').addEventListener('change',(e)=>{//정렬
+    document.getElementById('sortBy').addEventListener('change', (e) => {//정렬
         let sort = e.target.value;
-        if(sort === 'title'){
-            let arr = resultJson.results.map((item)=>item)
-            let resultArr = arr.sort((a,b)=>{
-                if(a.title < b.title)
+        if (sort === 'title') {
+            let arr = resultJson.results.map((item) => item)
+            let resultArr = arr.sort((a, b) => {
+                if (a.title < b.title)
                     return 1;
-                else if(a.title > b.title)
+                else if (a.title > b.title)
                     return -1;
                 else
                     return 0;
             })
             renderCard(resultArr);
-        }if(sort === 'vote_average'){
-            let arr = resultJson.results.map((item)=>item)
-            arr.sort((a,b)=>{
-                if(a.vote_average < b.vote_average)
+        } if (sort === 'vote_average') {
+            let arr = resultJson.results.map((item) => item)
+            arr.sort((a, b) => {
+                if (a.vote_average < b.vote_average)
                     return 1;
-                else if(a.vote_average > b.vote_average)
+                else if (a.vote_average > b.vote_average)
                     return -1;
                 else
                     return 0;
             })
             renderCard(arr);
         }
-        if(sort === 'release_date'){
-            let arr = resultJson.results.map((item)=>item)
-            arr.sort((a,b)=>{
-                if(a.release_date < b.release_date)
+        if (sort === 'release_date') {
+            let arr = resultJson.results.map((item) => item)
+            arr.sort((a, b) => {
+                if (a.release_date < b.release_date)
                     return 1;
-                else if(a.release_date > b.release_date)
+                else if (a.release_date > b.release_date)
                     return -1;
                 else
                     return 0;
@@ -49,30 +49,30 @@ window.onload = async function(){
     renderCard(resultJson.results)
 }
 
-function renderCard(arr){
+function renderCard(arr) {
     const content = document.getElementById('contents_container');
-    content.innerHTML=""//content 초기화
+    content.innerHTML = ""//content 초기화
     const cards = generateCards(arr);
-    cards.forEach(card=>{//카드 초기화
+    cards.forEach(card => {//카드 초기화
         content.appendChild(card);
     })
 }
 
-function searchCards(str,cardArr){
-    const reg = new RegExp(str,'i')
-    const newCards = cardArr.filter((card)=>{
+function searchCards(str, cardArr) {
+    const reg = new RegExp(str, 'i')
+    const newCards = cardArr.filter((card) => {
         return reg.test(card.title)
     })
     renderCard(newCards);
 }
 
-async function getMovies(){
+async function getMovies() {
     const url = 'https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1';
     const options = {
         method: 'GET',
         headers: {
-          accept: 'application/json',
-          Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYjJkZWEwNTQwOWI4OGY2ZWM1NTNhMGZhMjFiMjU2NSIsInN1YiI6IjY0NzJmNTY2YmUyZDQ5MDBmOTkzZmNjOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZRi3uX2RfmhoriDFnnN0YTzUqNPQ4HJQbS_JiM_r2js'
+            accept: 'application/json',
+            Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYjJkZWEwNTQwOWI4OGY2ZWM1NTNhMGZhMjFiMjU2NSIsInN1YiI6IjY0NzJmNTY2YmUyZDQ5MDBmOTkzZmNjOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.ZRi3uX2RfmhoriDFnnN0YTzUqNPQ4HJQbS_JiM_r2js'
         }
     };
 
@@ -84,19 +84,21 @@ async function getMovies(){
 function cardOnClick(id){
     window.location.href = `http://localhost:5500/spec.html?id=${id}`
 }
-function strToHtml(str){
+// 민규님의 설명으로 추가된 .. 영화 id 값에 맞는 상세페이지 열기
+
+function strToHtml(str) {
     const parser = new DOMParser();
-    const result = parser.parseFromString(str,'text/html');
+    const result = parser.parseFromString(str, 'text/html');
     return result;
 }
 
-function generateCards(arr){
+function generateCards(arr) {
     let cards = [];
     console.log(arr)
     arr.forEach(element => {
         let cardElement = document.createElement('div');
         cardElement.className = 'card';
-        cardElement.addEventListener('click',()=>{
+        cardElement.addEventListener('click', () => {
             cardOnClick(element.id)
         });
 
