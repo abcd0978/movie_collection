@@ -33,7 +33,7 @@ export function addComment(event) {
     // 고유 식별자 생성
     const commentId = generateCommentId();
 
-    // 새 댓글 요소 생성
+    //새 댓글 요소 생성
     const newComment = document.createElement('div');
     newComment.classList.add('comment');
     newComment.dataset.id = commentId;
@@ -47,7 +47,7 @@ export function addComment(event) {
     `;
 
     // 댓글 섹션에 새 댓글 추가
-    commentsSection.appendChild(newComment);
+     commentsSection.appendChild(newComment);
 
     // 입력 필드 초기화 (댓글을 작성하고 초기화해서 다시 새로운 댓글을 작성할수있게)
     commentInput.value = '';
@@ -65,8 +65,9 @@ export function addComment(event) {
 
     // 댓글 작성 알림 띄우기
     alert('평점과 리뷰가 작성되었다롱.');
-
     location.reload(); // 페이지 새로고침
+
+    
   } else {
     alert('입력 칸이 비어있다롱.');
   }
@@ -113,6 +114,8 @@ export function deleteComment(event) {
     comments = comments.filter(commentData => commentData.id !== commentId); // 고유 식별자를 기준으로 댓글 삭제
     localStorage.setItem('comments', JSON.stringify(comments));
     alert('댓글이 삭제되었다롱.');
+    location.reload(); // 페이지 새로고침
+
   } else {
     alert('비밀번호가 일치하지 않는다롱.');
   }
@@ -152,41 +155,39 @@ export function getStarRating(rating) {
 
 // 초기화 함수
 export function init() {
-  commentForm.addEventListener('submit', addComment); // 댓글 작성 이벤트 리스너 등록
-
   // 저장된 댓글 로드
   let comments = JSON.parse(localStorage.getItem('comments')) || [];
-  comments.forEach(commentData => {
-    const commentId = commentData.id;
-    const commentText = commentData.text;
-    const authorName = commentData.author;
-    const timestamp = commentData.time;
-    const password = commentData.password;
-    const rating = commentData.rating;
 
-    const commentElement = document.createElement('div');
-    commentElement.classList.add('comment');
-    commentElement.dataset.id = commentId;
-    commentElement.innerHTML = `
-      <p class="username">${authorName}</p>
-      <p class="timestamp">${timestamp}</p>
-      <p>${commentText}</p>
-      <p class="rating">${getStarRating(rating)}</p>
-      <button class="edit-button">수정</button>
-      <button class="delete-button">삭제</button>
-    `;
+  if (comments.length > 0) {
+    comments.forEach(commentData => {
+      const commentId = commentData.id;
+      const commentText = commentData.text;
+      const authorName = commentData.author;
+      const timestamp = commentData.time;
+      const password = commentData.password;
+      const rating = commentData.rating;
 
-    commentsSection.appendChild(commentElement);
+      const commentElement = document.createElement('div');
+      commentElement.classList.add('comment');
+      commentElement.dataset.id = commentId;
+      commentElement.innerHTML = `
+        <p class="username">${authorName}</p>
+        <p class="timestamp">${timestamp}</p>
+        <p>${commentText}</p>
+        <p class="rating">${getStarRating(rating)}</p>
+        <button class="edit-button">수정</button>
+        <button class="delete-button">삭제</button>
+      `;
 
-    commentElement.querySelector('.edit-button').addEventListener('click', editComment);
-    commentElement.querySelector('.delete-button').addEventListener('click', deleteComment);
-  });
+      commentsSection.appendChild(commentElement);
+
+      commentElement.querySelector('.edit-button').addEventListener('click', editComment);
+      commentElement.querySelector('.delete-button').addEventListener('click', deleteComment);
+    });
+  } else {
+   console.log("avc")// commentForm.addEventListener('submit', addComment); // 댓글 작성 이벤트 리스너 등록
+  }
 }
-
-init(); // 초기화 함수 호출
 
 // 댓글 작성 버튼에 이벤트 리스너 추가
 commentButton.addEventListener('click', addComment);
-
-// 페이지 로드 시 저장된 댓글 데이터 불러오기
-loadComments();
