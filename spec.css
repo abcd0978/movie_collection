@@ -55,14 +55,35 @@ p {
     border-radius: 4px;
 }
 .trailer {
+    width:100%;
     margin-bottom: 20px;
+    float: right;
+}
+.trailer #movieDetails{
+    float:right;
+    width: 40%;
+    height: 500px;
+}
+
+.trailer #movieDetails h1{
+    font-size: 5em;
+    padding-bottom: 30px;
+}
+.trailer #movieDetails p{
+
+}
+
+
+.trailer #movieTrailer {
+    float:left;
+    width: 60%;
+    height: 500px;
 }
 .trailer iframe {
     width: 100%;
-    height: 400px;
+    height: 100%;
 }
 
-/* 소율 - 변경 부분(시작) */
 .cast-card {
     /* div class명을 cast-card로 변경함 */
     display: flex;
@@ -80,7 +101,6 @@ p {
     background-color: #555;
     margin-right: 10px;
 }
-/* 소율 - 변경 부분(끝) */
 
 .comments {
     margin-bottom: 20px;

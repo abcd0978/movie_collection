@@ -81,9 +81,8 @@ async function getMovies() {
     return resJson
 }
 
-function cardOnClick(id) {
-    // alert(`영화 id:${id}`);
-    window.location.href = `http://localhost:5500/spec.html?id=${id}`;
+function cardOnClick(id){
+    window.location.href = `http://localhost:5500/spec.html?id=${id}`
 }
 // 민규님의 설명으로 추가된 .. 영화 id 값에 맞는 상세페이지 열기
 
