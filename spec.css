@@ -61,19 +61,27 @@ p {
     width: 100%;
     height: 400px;
 }
-.cast {
+
+/* 소율 - 변경 부분(시작) */
+.cast-card {
+    /* div class명을 cast-card로 변경함 */
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     margin-bottom: 20px;
 }
-.actor {
-    width: 100px;
-    height: 100px;
+.cast-card img {
+    /* cast-card 안의 img를 지정함 */
+    width: auto;
+    height: 200px;
+    /* width, heigt 값만 변경함 */
+    /* 가로 세로 길이를 지정해버리면 img가 강제로 그 사이즈에 맞춰지는 듯 -> 찌그러져 보임 .. */
     background-color: #555;
     margin-right: 10px;
 }
+/* 소율 - 변경 부분(끝) */
+
 .comments {
     margin-bottom: 20px;
 }
