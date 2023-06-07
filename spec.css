@@ -1,5 +1,5 @@
 body {
-  /* font-family: Arial, sans-serif; */
+  font-family: Arial, sans-serif;
   background-color: #000;
   color: #fff;
   padding: 20px;
@@ -55,25 +55,49 @@ p {
   border-radius: 4px;
 }
 .trailer {
+  width: 100%;
   margin-bottom: 20px;
+  float: right;
+}
+.trailer #movieDetails {
+  float: right;
+  width: 40%;
+  height: 500px;
+}
+
+.trailer #movieDetails h1 {
+  font-size: 5em;
+  padding-bottom: 30px;
+}
+
+.trailer #movieTrailer {
+  float: left;
+  width: 60%;
+  height: 500px;
 }
 .trailer iframe {
   width: 100%;
-  height: 400px;
+  height: 100%;
 }
-.cast {
+
+.cast-card {
+  /* div class명을 cast-card로 변경함 */
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 20px;
 }
-.actor {
-  width: 100px;
-  height: 100px;
+.cast-card img {
+  /* cast-card 안의 img를 지정함 */
+  width: auto;
+  height: 200px;
+  /* width, heigt 값만 변경함 */
+  /* 가로 세로 길이를 지정해버리면 img가 강제로 그 사이즈에 맞춰지는 듯 -> 찌그러져 보임 .. */
   background-color: #555;
   margin-right: 10px;
 }
+
 .comments {
   margin-bottom: 20px;
 }
@@ -106,141 +130,4 @@ p {
   padding: 5px 10px;
   border: none;
   cursor: pointer;
-}
-
-/* specTitle */
-/* 원래 상세 페이지 */
-/* .container {
-  position: relative;
-  min-height: 470px;
-  display: flex;
-  align-items: center;
-  margin-top: 5px !important;
-  border-radius: 0.5px;
-} */
-.second-img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  object-fit: cover;
-  border-radius: 0.5px;
-}
-.second-text {
-  padding-left: 40px;
-  margin-top: 200px;
-}
-.second-title {
-  /* font-size: 2px; */
-  font-weight: 600;
-  margin-bottom: px;
-}
-.watch-btn {
-  display: flex;
-  align-items: center;
-  column-gap: 0.8px;
-  color: #fff;
-}
-.details > h2,
-.cast {
-  margin: 70px;
-}
-
-/* 새 상세 페이지 */
-/* *,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-} */
-
-.span {
-  color: white;
-}
-
-.heading {
-  /* color: var(--white); */
-  font-size: 40px;
-  font-weight: bolder;
-  letter-spacing: 0.5px;
-  line-height: 1.2;
-  padding-bottom: 10px;
-}
-
-.rating {
-  padding-bottom: 10px;
-}
-
-.img-cover {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.meta-item {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.btn {
-  color: white;
-  /* font-size: 1.5px; */
-  font-weight: bold;
-  max-width: max-content;
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  padding-block: 12px;
-  padding-inline: 20px 24px;
-  border-radius: 8px;
-  transition: 250ms ease;
-  text-decoration: none;
-}
-
-.container {
-  position: relative;
-  background-color: hsla(349, 69%, 51%, 1);
-  color: on surface;
-  padding: 24px 20px 48px;
-  /* height: calc(100vh - 96px);
-  overflow-y: overlay; */
-  z-index: 1;
-}
-
-/* 등장인물 하단 */
-.container::after {
-  content: "";
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 150px;
-  background-image: linear-gradient(hsla(250, 13%, 11%, 0));
-  z-index: 1;
-  pointer-events: none;
-}
-
-/* 별 모양 */
-/* .star {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-} */
-/* 평점 글자 크기 */
-.vote {
-  font-size: 22px;
-}
-
-/* 별 모양 채우기 */
-.filled {
-  background-position: 0 0;
-}
-.half-filled {
-  background-position: -20px 0;
-}
-
-.overview {
-  font-size: 20px;
 }
