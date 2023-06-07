@@ -1,3 +1,3 @@
-import { header, headerName } from "./header.js";
+import { getSavedNickname } from "./header.js";
 
-console.log(header());
+const savedNickname = getSavedNickname();

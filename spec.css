@@ -49,6 +49,17 @@ header {
   color: rgb(248, 236, 11);
 }
 
+.headerForm > a {
+  padding-right: 10px;
+}
+
+.headerForm > p {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+}
+
 .container {
   display: flex;
   flex-direction: row;
