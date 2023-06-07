@@ -1,6 +1,8 @@
+@import "reset.css";
+
 body{
     min-height: 300px;
-    background: linear-gradient(rgb(86, 65, 239), rgb(149, 92, 246));
+    background: linear-gradient(rgb(250, 250, 250), rgb(6, 6, 6));
 }
 header{
     width:100%;
@@ -8,9 +10,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-
 }
-
 header #container{
     background-color: antiquewhite;
     border-radius: 10px;
@@ -23,6 +23,7 @@ header #container{
 }
 
 header #pageTitle{
+    font-size: 2em;
     float: left;
     padding-left: 30px;
     width:100%;
@@ -79,7 +80,7 @@ header #sortBy{
 }
 
 .card{
-    background-color: rgb(188, 171, 250);
+    background-color: rgb(140, 140, 140);
     border-radius: 10px;
     text-align: center;
     align-items: center;
@@ -115,10 +116,12 @@ header #sortBy{
 
 .card p{
     width:100%;
+    font-size: 1em;
 }
 
 .card #title{
-    font-size: 25px;
+    font-size: 1.6em;
+    padding-bottom: 0.6em;
 }
 
 .card #posterImg{
@@ -130,5 +133,5 @@ header #sortBy{
 .card .starContainer{
     width: 100%;
     position:absolute; 
-    bottom:10px;
+    bottom:0.8em;
 }

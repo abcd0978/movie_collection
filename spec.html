@@ -1,39 +1,40 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="spec.css">
     <link rel="stylesheet" href="reset.css">
     <title>영화 제목 - Netflix</title>
    <script src="./specmodules/spec.js" type="module"></script>
+
 </head>
+
 <body>
 
-    <div class="header">
-      <div class="logo">비트코드</div>
-      <button class="back-button">뒤로가기</button>
-    </div>
+  <div class="header">
+    <div class="logo">비트코드</div>
+    <button class="back-button">뒤로가기</button>
+  </div>
 
     <section class="container">
       <div class="details">
-        <h1>영화 제목</h1>
-        <p>영화 설명이 여기에 들어갑니다.</p>
-        <h2>예고편</h2>
+
         
         <div class="trailer">
-          <iframe src="예고편 동영상 URL" frameborder="0" allowfullscreen></iframe>
+            <div id="movieDetails">
+                <h1 id="movieTitle"></h1>
+                <p id="movieOverview"></p>
+            </div>
         </div>
-        
+
         <h2>등장인물</h2>
-        <div class="cast">
-            <div class="actor"></div>
-            <div class="actor"></div>
-            <div class="actor"></div>
-            <!-- 필요한 만큼 인물 상자(.actor)를 추가할 수 있습니다 -->
-        </div>
+          <div class="cast-card">
+          <!-- 이 곳에 spec.js안에 있는 temp_html이 들어감 -->
+          </div>
+
       </div>
     </section>
-
     <div class="comment-form">
       <input type="text" class="author-input" placeholder="작성자 이름"><input type="password" class="password-input" placeholder="비밀번호">
       <textarea placeholder="리뷰를 작성하세요"></textarea>
@@ -60,4 +61,6 @@
         </div>
     </div>
 </body>
+<script type="module" src="./specModules/spec.js"></script>
 </html>
+
