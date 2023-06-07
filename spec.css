@@ -223,12 +223,11 @@ p {
 }
 
 /* 별 모양 */
-.star {
+/* .star {
   display: inline-block;
   width: 30px;
   height: 30px;
-  background-image: url(./assets/star.png);
-}
+} */
 /* 평점 글자 크기 */
 .vote {
   font-size: 22px;
