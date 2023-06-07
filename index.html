@@ -1,47 +1,90 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
- <head>
-  <meta charset = "utf-8">
-  <link rel="stylesheet" href="index.css">
-  <link rel="stylesheet" href="reset.css">
-  <title>개인과제</title>
- </head>
- <body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <title>Bitcode</title>
+  </head>
+  <body>
     <header>
-        <div id="container">
-
-            
-            <h1 id="pageTitle">인기영화 모음집</h1>
-
-
-            <div id="voidSection">
-
-            </div>
-
-            <div id="util">
-                <div id="searchSection">
-                    <form id="searchForm">
-                        <input type="text" id="search" placeholder="검색" autofocus>
-                        <button id="searchButton" type>🔍</button>
-                    </form>
-                </div>
-                
-                <select id="sortBy">
-                    <option value="">sortBy</option>
-                    <option value="vote_average">평점</option>
-                    <option value="release_date">개봉일</option>
-                    <option value="title">알파벳</option>
-                </select>
-            </div>
-
-        </div>
+      <div class="container">
+        <h1 class="pageTitle">Byte<span>Flix</span></h1>
+        <!-- search -->
+        <form id="searchForm" class="searchForm">
+          <input
+            type="search"
+            id="search"
+            size="23px"
+            placeholder="영화 제목을 검색해 보세요"
+            autofocus
+          />
+          <button id="searchButton" class="searchBtn">
+            <box-icon name="search" color="#ffffff"></box-icon>
+          </button>
+        </form>
+        <!-- login -->
+        <button id="loginBtn">Login</button>
+        <p id="greeting" class="hidden"></p>
+      </div>
     </header>
-    <div class="contents">
-        <div id="contents_container">
 
-        </div>
+    <div class="contents">
+      <select id="sortBy">
+        <option value="">sortBy</option>
+        <option value="vote_average">평점</option>
+        <option value="release_date">개봉일</option>
+        <option value="title">알파벳</option>
+      </select>
+      <div id="contents_container"></div>
     </div>
 
- </body>
- <script type="text/javascript" src="index.js"></script>
+    <!-- login popup -->
+    <div class="outer">
+      <div class="wrapper">
+        <span class="icon-close">
+          <box-icon name="x" color="rgba(29,28,33,0.85)"></box-icon>
+        </span>
+        <div id="login-form">
+          <h2>Welcome</h2>
+          <form id="loginForm">
+            <div class="input-box">
+              <span class="icon">
+                <box-icon
+                  type="solid"
+                  name="envelope"
+                  color="rgba(29,28,33,0.85)"
+                ></box-icon>
+              </span>
+              <input type="text" id="nicknameInput" required />
+              <label for="nicknameInput">Nickname</label>
+            </div>
+            <div class="input-box">
+              <span class="icon">
+                <box-icon
+                  type="solid"
+                  name="lock-alt"
+                  color="rgba(29,28,33,0.85)"
+                ></box-icon>
+              </span>
+              <input type="Password" id="passwordInput" required />
+              <label for="passwordInput">Password</label>
+            </div>
+            <div class="remember-forgot">
+              <a href="#">비밀번호를 잊으셨습니까?</a>
+            </div>
+            <button type="submit" id="login-btn" class="btn">Login</button>
+            <div class="login-register">
+              <p>
+                계정이 없으신가요?
+                <a href="#" class="register-link">회원가입</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="index.js"></script>
 </html>

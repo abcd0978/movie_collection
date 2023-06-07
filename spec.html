@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="spec.css">
-    <link rel="stylesheet" href="reset.css">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="spec.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>영화 제목 - Netflix</title>
-</head>
-<body>
-
-    <div class="header">
-      <div class="logo">비트코드</div>
-      <button class="back-button">뒤로가기</button>
-    </div>
+    <script src="./specModules/spec.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="headerForm">
+        <h1 class="pageTitle">
+          <a href="index.html">Byte<span>Flix</span></a>
+        </h1>
+        <button><a href="index.html">뒤로가기</a></button>
+        <p id="greeting"></p>
+      </div>
+    </header>
 
     <section class="container">
       <div class="details">
         <h1>영화 제목</h1>
         <p>영화 설명이 여기에 들어갑니다.</p>
         <h2>예고편</h2>
-        
+
         <div class="trailer">
-          <iframe src="예고편 동영상 URL" frameborder="0" allowfullscreen></iframe>
+          <iframe
+            src="예고편 동영상 URL"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
         </div>
-        
+
         <h2>등장인물</h2>
         <div class="cast">
-            <div class="actor"></div>
-            <div class="actor"></div>
-            <div class="actor"></div>
-            <!-- 필요한 만큼 인물 상자(.actor)를 추가할 수 있습니다 -->
+          <div class="actor"></div>
+          <div class="actor"></div>
+          <div class="actor"></div>
+          <!-- 필요한 만큼 인물 상자(.actor)를 추가할 수 있습니다 -->
         </div>
       </div>
     </section>
@@ -46,13 +56,12 @@
           <p class="timestamp">2023-06-05 13:00:00</p>
           <p>두 번째 댓글입니다.</p>
         </div>
-          <!-- 필요한 만큼 댓글(.comment)을 추가할 수 있습니다 -->
-        </div>  
-        <h3>댓글 작성</h3>
-        <div class="comment-form">
-          <textarea placeholder="댓글을 작성하세요"></textarea>
-          <button>작성</button>
-        </div>
+        <!-- 필요한 만큼 댓글(.comment)을 추가할 수 있습니다 -->
+      </div>
+      <h3>댓글 작성</h3>
+      <div class="comment-form">
+        <textarea placeholder="댓글을 작성하세요"></textarea>
+        <button>작성</button>
       </div>
     </section>
   </body>
