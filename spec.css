@@ -65,14 +65,18 @@ p {
     height: 500px;
 }
 
-.trailer #movieDetails h1{
+.trailer #titleSection {
     font-size: 5em;
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
-.trailer #movieDetails p{
-
+.blink{
+    animation: blink 1s step-end infinite;
 }
-
+@keyframes blink {
+50% {
+    opacity: 0;
+}
+}
 
 .trailer #movieTrailer {
     float:left;

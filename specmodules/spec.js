@@ -1,9 +1,5 @@
 import { getVideoLink,getDetails } from "./video.js";
 import {getMovieCredits} from "./specPeople.js"
-import {init}from"./specReview - 치훈.js"
-
-init()
-
 window.onload= async function(){
     const URLSearch = new URLSearchParams(location.search);
     const movieId = URLSearch.get('id');
@@ -15,7 +11,6 @@ window.onload= async function(){
     typing("movieTitle",movieDetails.title,150);
     const overview  = document.getElementById("movieOverview")
     overview.textContent = movieDetails.overview
-    
 }
 
 
@@ -29,4 +24,3 @@ function typing(id,str,time){
         setTimeout(typing,time,id,str,time);
     }
 }
-
