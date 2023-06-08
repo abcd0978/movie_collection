@@ -27,7 +27,7 @@ export async function getMovieCredits(movieId) {
       creditsOptions
     );
     const creditsData = await creditsResponse.json();
-    let casts = creditsData.cast.slice(0, 8);
+    let casts = creditsData.cast.slice(0, 12);
 // fetch 함수를 사용하여 TMDB API로 영화의 출연진 정보를 요청한다. 
 // creditsResponse 변수에 응답 객체가 저장된다. 
 // 그리고 creditsData 변수에는 응답 데이터를 JSON 형식으로 변환한 결과가 저장된다. 
@@ -38,9 +38,15 @@ export async function getMovieCredits(movieId) {
     console.log("Cast:");
     casts.forEach((cast) => {
       let name = cast.name;
-      let character = cast.character;
+      let character = "";
       let castImg = cast.profile_path;
-
+      if(cast.character.length > 20){
+        let temp = cast.character.slice(0,18);
+        temp = temp+"...";
+        character = temp;
+      }else{
+        character = cast.character;
+      }
       // profile_path 값이 null이 아닌 경우에만 배우 정보를 추가한다.
       if (castImg !== null) {
         let temp_html = `<div class="actor">

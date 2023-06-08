@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="reset.css" />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>Bitcode</title>
+    <script src="./mainModules/main.js" type="module"></script>
   </head>
   <body>
     <header>
@@ -32,7 +33,7 @@
 
     <div class="contents">
       <select id="sortBy">
-        <option value="">sortBy</option>
+        <option value="">&nbsp&nbsp필터</option>
         <option value="vote_average">평점</option>
         <option value="release_date">개봉일</option>
         <option value="title">알파벳</option>
@@ -44,7 +45,7 @@
     <div class="outer">
       <div class="wrapper">
         <span class="icon-close">
-          <box-icon name="x" color="rgba(29,28,33,0.85)"></box-icon>
+          <box-icon name="x" color="#ffffff"></box-icon>
         </span>
         <div id="login-form">
           <h2>Welcome</h2>
@@ -54,7 +55,7 @@
                 <box-icon
                   type="solid"
                   name="envelope"
-                  color="rgba(29,28,33,0.85)"
+                  color="#ffffff"
                 ></box-icon>
               </span>
               <input type="text" id="nicknameInput" required />
@@ -65,7 +66,7 @@
                 <box-icon
                   type="solid"
                   name="lock-alt"
-                  color="rgba(29,28,33,0.85)"
+                  color="#ffffff"
                 ></box-icon>
               </span>
               <input type="Password" id="passwordInput" required />
@@ -85,6 +86,21 @@
         </div>
       </div>
     </div>
+    
+      <footer>
+        <div class="team-members">
+          <span>Bitcode</span>
+          <ul>
+            <li>🐹 이수진 김민규 안치훈 이소율 지설희 🐹</li>
+          </ul>
+        </div>
+        <div class="github-link">
+          <p>ByteFlix project github&nbsp</p>
+          <a href="https://github.com/abcd0978/movie_collection.git" target="_blank">
+            <box-icon id="logo" type='logo' name='github'></box-icon>
+          </a>
+        </div>
+        <p class="final-text">Copyleft: free to copy</p>
+      </footer>
   </body>
-  <script type="text/javascript" src="index.js"></script>
 </html>
