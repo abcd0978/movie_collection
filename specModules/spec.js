@@ -2,6 +2,8 @@ import { getVideoLink,getDetails } from "./video.js";
 import {getMovieCredits} from "./specPeople.js"
 import {init} from "./specReview - 치훈.js"
 import { typing } from "./typing.js";
+import { getSavedNickname } from "./header.js";
+
 init()
 window.onload= async function(){
     const URLSearch = new URLSearchParams(location.search);
@@ -15,3 +17,4 @@ window.onload= async function(){
     const overview  = document.getElementById("movieOverview")
     overview.textContent = movieDetails.overview
 }
+const savedNickname = getSavedNickname();
