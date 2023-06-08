@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="spec.css">
-    <link rel="stylesheet" href="reset.css">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="spec.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <title>영화 제목 - Netflix</title>
-  <!-- <script src="./specmodules/spec.js" type="module"></script>-->
-
-</head>
-
-<body>
-
-  <div class="header">
-    <div class="logo">비트코드</div>
-    <button class="back-button">뒤로가기</button>
-  </div>
+    <script src="./specModules/spec.js" type="module"></script>
+  </head>
+  <body>
+    <header>
+      <div class="headerForm">
+        <h1 class="pageTitle">
+          <a href="index.html">Byte<span>Flix</span></a>
+        </h1>
+        <a href="index.html">
+          <box-icon name="home-heart" type="solid" color="#ffffff"></box-icon>
+        </a>
+        <p id="greeting"></p>
+      </div>
+    </header>
 
     <section class="container">
       <div class="details">
@@ -27,6 +31,7 @@
                 <p id="movieOverview"></p>
             </div>
         </div>
+
 
         <h2>등장인물</h2>
           <div class="cast-card">
@@ -63,4 +68,5 @@
 </body>
 <script type="module" src="./specModules/spec.js"></script>
 </html>
+
 
