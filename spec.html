@@ -1,51 +1,57 @@
 <!DOCTYPE html>
 <html lang="ko">
+
+<div class="full-page">
+
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="spec.css" />
     <link rel="stylesheet" href="reset.css" />
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <title>영화 제목 - Netflix</title>
+    <title>Bitcode</title>
     <script src="./specModules/spec.js" type="module"></script>
   </head>
+
   <body>
+
+
     <header>
       <div class="headerForm">
         <h1 class="pageTitle">
           <a href="index.html">Byte<span>Flix</span></a>
         </h1>
-        <a href="index.html">
-          <box-icon name="home-heart" type="solid" color="#ffffff"></box-icon>
-        </a>
         <p id="greeting"></p>
+        <a href="index.html">
+          <box-icon name="home-heart" type="solid" size="40px" color="#ffffff"></box-icon>
+        </a>
       </div>
     </header>
 
     <section class="container">
       <div class="details">
 
-        
+
         <div class="trailer">
-            <div id="movieDetails">
-              <div id="titleSection">
-                <h1 style="display: inline;" id="movieTitle"></h1><h1  style="display: inline;" class="blink">|</h1>
-              </div>
-                <p id="movieOverview"></p>
+          <div id="movieDetails">
+            <div id="titleSection">
+              <h1 style="display: inline;" id="movieTitle"></h1><h1 style="display: inline;" class="blink">|</h1>
             </div>
-        </div>
-
-
-        <h2>등장인물</h2>
-          <div class="cast-card">
-          <!-- 이 곳에 spec.js안에 있는 temp_html이 들어감 -->
+            <p id="movieOverview"></p>
           </div>
-
-      </div>
+        </div>
     </section>
-    <div class="comment-form">
-      <input type="text" class="author-input" placeholder="작성자 이름"><input type="password" class="password-input" placeholder="비밀번호">
-      <textarea placeholder="리뷰를 작성하세요"></textarea>
-      
+    <div class="cast-section">
+      <h2>출연</h2>
+      <div class="cast-card">
+        <!-- 이 곳에 spec.js안에 있는 temp_html이 들어감 -->
+      </div>
+    </div>
+
+</div>
+
+<div class="comment-center">
+  <div class="comment-form">
+    <div class="input-container">
       <select class="rating-input">
         <option value="1">⭐️</option>
         <option value="2">⭐️⭐️</option>
@@ -53,22 +59,46 @@
         <option value="4">⭐️⭐️⭐️⭐️</option>
         <option value="5">⭐️⭐️⭐️⭐️⭐️</option>
       </select>
-      <button>작성</button>
+      <input type="text" class="author-input" placeholder="작성자 이름">
+      <input type="password" class="password-input" placeholder="비밀번호">
     </div>
-    
-    </section>
+    <div class="textarea-container">
+      <textarea placeholder="리뷰를 작성하세요"></textarea>
+    </div>
+    <button>작성</button>
+  </div>
+</div>
 
-    <div class="comments">
-        <div class="comment">
-            <p class="username">홍길동</p>
-            <p class="timestamp">2023-06-05 12:34:56</p>
-            <p>너무 재미있습니다!</p>
-            <button class="edit-button" data-comment-id="1">수정</button>
-            <button class="delete-button">삭제</button>
-        </div>
+</section>
+
+<div class="comments">
+  <div class="comment">
+    <p class="username">홍길동</p>
+    <p class="timestamp">2023-06-05 12:34:56</p>
+    <p>너무 재미있습니다!</p>
+    <div class="buttons">
+    <button class="edit-button" data-comment-id="1">수정</button>
+    <button class="delete-button">삭제</button>
     </div>
+  </div>
+</div>
+
+</div>
+<footer>
+  <div class="team-members">
+    <span>Bitcode</span>
+    <ul>
+      <li>🐹 이수진 김민규 안치훈 이소율 지설희 🐹</li>
+    </ul>
+  </div>
+  <div class="github-link">
+    <p>ByteFlix project github&nbsp</p>
+    <a href="https://github.com/abcd0978/movie_collection.git" target="_blank">
+      <box-icon id="logo" type='logo' name='github'></box-icon>
+    </a>
+  </div>
+  <p class="final-text">Copyleft: free to copy</p>
+</footer>
 </body>
-<script type="module" src="./specModules/spec.js"></script>
+
 </html>
-
-

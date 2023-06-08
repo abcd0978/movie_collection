@@ -11,19 +11,26 @@ html {
 }
 
 body {
-  min-height: 300px;
-  background-color: #18181b;
+  background-color: #f6f3ef;/* 밝은 배경색 */
+  background-image: url("https://i.ibb.co/MRqx3pc/alex-koch-v-WBGy7-Bc-AMk-unsplash.jpg");
+  background-size: cover;
+  background-color: repeat-y;
+  font-family: Arial, sans-serif; /* 폰트 변경 */
 }
+
+
 
 header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(39, 39, 42, 0.9);
+  height: 105px;
+  background-color:#e0d1ff;
   border-bottom: none;
   position: fixed;
   z-index: 99;
 }
+
 
 header .container {
   padding: 1rem;
@@ -35,13 +42,16 @@ header .container {
 
 header .pageTitle {
   font-size: 4rem;
-  color: #fff;
+  color:#c993f3;
   font-weight: 600;
   margin: 0 auto 0 0;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.5p #2c240200;
+
 }
 
 header .pageTitle > span {
-  color: rgb(248, 236, 11);
+  color: #f2e1ff;
 }
 
 header .searchForm {
@@ -49,7 +59,7 @@ header .searchForm {
   margin-right: 30px;
   display: flex;
   align-items: center;
-  background: rgba(60, 60, 63, 0.9);
+  background:  #B7A3EB;
   border-radius: 4rem;
   border: 2px solid #fff;
 }
@@ -69,6 +79,10 @@ header .searchForm input:focus {
   outline: none;
 }
 
+header .searchForm input::placeholder {
+  color: #fff;
+}
+
 header .searchBtn {
   padding: 3px;
   height: 30px;
@@ -79,22 +93,6 @@ header .searchBtn {
 
 header .searchBtn:hover {
   cursor: pointer;
-}
-
-.card {
-  background-color: rgb(140, 140, 140);
-  border-radius: 10px;
-  text-align: center;
-  align-items: center;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  width: 25%;
-  min-width: 300px;
-  min-height: 400px;
-  box-shadow: 3px 3px 20px;
-  position: relative;
 }
 
 #loginBtn {
@@ -119,7 +117,8 @@ header .searchBtn:hover {
 
 #greeting {
   color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 0.5p#2c240200;
   font-size: 1.2rem;
   letter-spacing: 2px;
 }
@@ -140,16 +139,6 @@ header .searchBtn:hover {
   z-index: -1;
 }
 
-.card p {
-  width: 100%;
-  font-size: 1em;
-}
-
-.card #title {
-  font-size: 1.6em;
-  padding-bottom: 0.6em;
-}
-
 .wrapper {
   position: relative;
   width: 400px;
@@ -157,7 +146,7 @@ header .searchBtn:hover {
   background: transparent;
   border: 2px solid rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  backdrop-filter: blur(80px);
+  backdrop-filter: blur(30px);
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   transform: scale(0);
@@ -186,7 +175,7 @@ header .searchBtn:hover {
   height: 45px;
   background: transparent;
   font-size: 2em;
-  color: #1d1c21cc;
+  color: #f6f3ef;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -197,7 +186,7 @@ header .searchBtn:hover {
 
 #login-form h2 {
   font-size: 2em;
-  color: #1d1c21cc;
+  color: #f6f3ef;
   text-align: center;
 }
 
@@ -205,7 +194,7 @@ header .searchBtn:hover {
   position: relative;
   width: 100%;
   height: 50px;
-  border-bottom: 2px solid #1d1c21cc;
+  border-bottom: 2px solid #f6f3ef;
   margin: 30px 0;
 }
 
@@ -214,7 +203,7 @@ header .searchBtn:hover {
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
-  color: #1d1c21cc;
+  color: #f6f3ef;
   font-weight: 500;
   pointer-events: none;
   transition: 0.5s;
@@ -232,7 +221,7 @@ header .searchBtn:hover {
   border: none;
   outline: none;
   font-size: 1em;
-  color: #1d1c21cc;
+  color: #f6f3ef;
   font-weight: 600;
   padding: 0 35px 0 5px;
 }
@@ -241,13 +230,13 @@ header .searchBtn:hover {
   position: absolute;
   right: 8px;
   font-size: 1.2em;
-  color: #1d1c21cc;
+  color: #f6f3ef;
   line-height: 57px;
 }
 
 .remember-forgot {
   font-size: 0.9em;
-  color: #1d1c21cc;
+  color: #f6f3ef;
   font-weight: 500;
   margin: -15px 0 15px;
   display: flex;
@@ -255,7 +244,7 @@ header .searchBtn:hover {
 }
 
 .remember-forgot a {
-  color: #1d1c21cc;
+  color: #f6f3ef;
   text-decoration: none;
 }
 
@@ -266,26 +255,26 @@ header .searchBtn:hover {
 .btn {
   width: 100%;
   height: 45px;
-  background: #1d1c21cc;
+  background: #c993f3;
   border: none;
   outline: none;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1em;
-  color: #fff;
+  color: #f6f3ef;
   font-weight: 500;
 }
 
 .login-register {
   font-size: 0.9em;
-  color: #1d1c21cc;
+  color: #f6f3ef;
   text-align: center;
   font-weight: 500;
   margin: 25px 0 10px;
 }
 
 .login-register p a {
-  color: #1d1c21cc;
+  color: #f6f3ef;
   text-decoration: none;
   font-weight: 600;
 }
@@ -300,6 +289,7 @@ select {
 
 .contents {
   position: absolute;
+  top: 20px;
   margin-top: 100px;
   width: 100%;
   text-align: -webkit-center;
@@ -313,8 +303,38 @@ select {
   justify-items: center;
 }
 
+@media (max-width: 1050px) {
+  .contents #contents_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  }
+}
+
+@media (max-width: 730px) {
+  .contents #contents_container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+}
+
+
+
+.contents #sortBy {
+  background: #f2e1ff;
+  margin-right: 10px;
+  width: 90px;
+  border: 0.5px solid #ded0ff;
+  height: 40px;
+  border-radius: 0.7em;
+  color: rgb(89, 87, 89);
+}
+
+
 .card {
-  background-color: rgb(188, 171, 250);
   border-radius: 10px;
   text-align: center;
   align-items: center;
@@ -325,20 +345,16 @@ select {
   width: 25%;
   min-width: 300px;
   min-height: 400px;
-  box-shadow: 3px 3px 20px;
   position: relative;
 }
+
 
 .card :hover {
   cursor: pointer;
 }
 
 .card #cardContainer {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 10px;
-  padding-right: 10px;
-  transition-duration: 0.3s;
+  transition-duration: 0.1s;
 }
 
 .card #cardContainer:hover {
@@ -351,17 +367,102 @@ select {
 }
 
 .card #title {
+  padding-top: 7px;
   font-size: 25px;
+  font-weight: bold; /* 글자 두껍게 설정 */
 }
 
 .card #posterImg {
+  width:100%;
   border-radius: 10px;
-  width: 250px;
   height: auto;
+  position: relative;
 }
 
+footer {
+  position: absolute;
+  left: 0;
+  bottom: -2300px;
+  width: 100%;
+  background-color: #e0d1ff;
+  text-align: center;
+}
+
+.team-members {
+  margin: 20px;
+  margin-bottom: 20px;
+}
+
+.team-members span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.team-members ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-members li {
+  margin-top: 13px;
+}
+
+.github-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.github-link a {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.github-link #logo{
+  transition-duration: 0.2s;
+}
+
+.github-link #logo:hover {
+  transform: scale(1.3);
+  transition-duration: 0.5s;
+}
+
+.card #rating{
+  font-size: 1.em;
+  color: white;
+  position: absolute;
+  top:2%;
+  left:78%;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  padding: 3px 6px;
+}
 .card .starContainer {
   width: 100%;
   position: absolute;
   bottom: 0.8em;
+}
+
+.final-text {
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+
+@keyframes gradient {
+  0% {
+   background-position: 0% 50%;
+  }
+  50% {
+   background-position: 100% 50%;
+  }
+  100% {
+   background-position: 0% 50%;
+  }
 }
