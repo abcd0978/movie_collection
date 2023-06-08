@@ -1,137 +1,367 @@
 @import "reset.css";
 
-body{
-    min-height: 300px;
-    background: linear-gradient(rgb(250, 250, 250), rgb(6, 6, 6));
-}
-header{
-    width:100%;
-    height:100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header #container{
-    background-color: antiquewhite;
-    border-radius: 10px;
-    width:100%;
-    min-width: 900px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    box-shadow: 5px 5px 20px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header #pageTitle{
-    font-size: 2em;
-    float: left;
-    padding-left: 30px;
-    width:100%;
-    white-space: nowrap;
+html {
+  height: 100px;
 }
 
-header #voidSection{
-    width: 800px;
-    min-width: 200px;
+body {
+  min-height: 300px;
+  background-color: #18181b;
 }
 
-header #searchSection{
-    width: 300px;
-    background-color: grey;
-    border-radius: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(39, 39, 42, 0.9);
+  border-bottom: none;
+  position: fixed;
+  z-index: 99;
 }
 
-header #searchSection #search{
-    width: 80%;
-    height: 30px;
-    border: none;
-    margin-left: 9px;
-    border-radius: 10px 0px 0px 10px;
+header .container {
+  padding: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header #searchSection #search:focus{
-    outline:none;
+header .pageTitle {
+  font-size: 4rem;
+  color: #fff;
+  font-weight: 600;
+  margin: 0 auto 0 0;
 }
 
-header #searchSection #searchButton{
-    padding-bottom: 3px;
-    height: 32px;
-    border-radius: 0px 10px 10px 0px;
-    border: 0px;
+header .pageTitle > span {
+  color: rgb(248, 236, 11);
 }
 
-header #sortBy{
-    width: 100%;
-    height: 30%;
+header .searchForm {
+  padding: 5px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  background: rgba(60, 60, 63, 0.9);
+  border-radius: 4rem;
+  border: 2px solid #fff;
 }
 
-.contents{
-    width:100%;
-    text-align: -webkit-center;
+header .searchForm input {
+  width: 100%;
+  height: 30px;
+  border: none;
+  /* outline: none; */
+  color: #fff;
+  margin-left: 12px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: transparent;
 }
 
-.contents #contents_container{
-    width:100%;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    justify-items: center;
+header .searchForm input:focus {
+  outline: none;
 }
 
-.card{
-    background-color: rgb(140, 140, 140);
-    border-radius: 10px;
-    text-align: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
-    width:25%;
-    min-width: 300px;
-    min-height: 400px;
-    box-shadow: 3px 3px 20px;
-    position:relative;
+header .searchBtn {
+  padding: 3px;
+  height: 30px;
+  border-radius: 0px 10px 10px 0px;
+  border: 0px;
+  background-color: transparent;
 }
 
-.card :hover{
-    cursor: pointer;
+header .searchBtn:hover {
+  cursor: pointer;
 }
 
-.card #cardContainer{
-    padding-top: 30px;
-    padding-bottom:30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    transition-duration: 0.3s;
+.card {
+  background-color: rgb(140, 140, 140);
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 25%;
+  min-width: 300px;
+  min-height: 400px;
+  box-shadow: 3px 3px 20px;
+  position: relative;
 }
 
-.card #cardContainer:hover{
-    transform: scale(1.05); 
-    transition-duration: 0.5s;
+#loginBtn {
+  width: 120px;
+  height: 44px;
+  background: transparent;
+  border: 2px solid #fff;
+  outline: none;
+  border-radius: 4rem;
+  cursor: pointer;
+  font-size: 1.1em;
+  color: #fff;
+  font-weight: 500;
+  margin-right: 10px;
+  transition: 0.5s;
 }
 
-
-
-.card p{
-    width:100%;
-    font-size: 1em;
+#loginBtn:hover {
+  background: #fff;
+  color: #162938;
 }
 
-.card #title{
-    font-size: 1.6em;
-    padding-bottom: 0.6em;
+#greeting {
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
 }
 
-.card #posterImg{
-    border-radius: 10px;
-    width:250px;
-    height: auto;
+.hidden {
+  display: none;
 }
 
-.card .starContainer{
-    width: 100%;
-    position:absolute; 
-    bottom:0.8em;
+.outer {
+  position: inherit;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+.card p {
+  width: 100%;
+  font-size: 1em;
+}
+
+.card #title {
+  font-size: 1.6em;
+  padding-bottom: 0.6em;
+}
+
+.wrapper {
+  position: relative;
+  width: 400px;
+  height: 440px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  backdrop-filter: blur(80px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform 0.5s ease, height 0.2s ease;
+  z-index: 0;
+}
+
+.wrapper.active-popup {
+  transform: scale(1);
+}
+
+.wrapper.active {
+  height: 520px;
+}
+
+.wrapper #login-form {
+  width: 100%;
+  padding: 40px;
+}
+
+.wrapper .icon-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  background: transparent;
+  font-size: 2em;
+  color: #1d1c21cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+#login-form h2 {
+  font-size: 2em;
+  color: #1d1c21cc;
+  text-align: center;
+}
+
+.input-box {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid #1d1c21cc;
+  margin: 30px 0;
+}
+
+.input-box label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  color: #1d1c21cc;
+  font-weight: 500;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label {
+  top: -5px;
+}
+
+.input-box input {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  color: #1d1c21cc;
+  font-weight: 600;
+  padding: 0 35px 0 5px;
+}
+
+.input-box .icon {
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  color: #1d1c21cc;
+  line-height: 57px;
+}
+
+.remember-forgot {
+  font-size: 0.9em;
+  color: #1d1c21cc;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.remember-forgot a {
+  color: #1d1c21cc;
+  text-decoration: none;
+}
+
+.remember-forgot a:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  width: 100%;
+  height: 45px;
+  background: #1d1c21cc;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.login-register {
+  font-size: 0.9em;
+  color: #1d1c21cc;
+  text-align: center;
+  font-weight: 500;
+  margin: 25px 0 10px;
+}
+
+.login-register p a {
+  color: #1d1c21cc;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.login-register p a:hover {
+  text-decoration: underline;
+}
+
+select {
+  float: right;
+}
+
+.contents {
+  position: absolute;
+  margin-top: 100px;
+  width: 100%;
+  text-align: -webkit-center;
+  z-index: 0;
+}
+
+.contents #contents_container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+}
+
+.card {
+  background-color: rgb(188, 171, 250);
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: 25%;
+  min-width: 300px;
+  min-height: 400px;
+  box-shadow: 3px 3px 20px;
+  position: relative;
+}
+
+.card :hover {
+  cursor: pointer;
+}
+
+.card #cardContainer {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition-duration: 0.3s;
+}
+
+.card #cardContainer:hover {
+  transform: scale(1.05);
+  transition-duration: 0.5s;
+}
+
+.card p {
+  width: 100%;
+}
+
+.card #title {
+  font-size: 25px;
+}
+
+.card #posterImg {
+  border-radius: 10px;
+  width: 250px;
+  height: auto;
+}
+
+.card .starContainer {
+  width: 100%;
+  position: absolute;
+  bottom: 0.8em;
 }
