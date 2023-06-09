@@ -11,26 +11,22 @@ html {
 }
 
 body {
-  background-color: #f6f3ef;/* 밝은 배경색 */
+  background-color: #f6f3ef;
   background-image: url("https://i.ibb.co/MRqx3pc/alex-koch-v-WBGy7-Bc-AMk-unsplash.jpg");
   background-size: cover;
   background-color: repeat-y;
-  font-family: Arial, sans-serif; /* 폰트 변경 */
 }
-
-
 
 header {
   top: 0;
   left: 0;
   width: 100%;
   height: 105px;
-  background-color:#e0d1ff;
+  background-color: #e0d1ff;
   border-bottom: none;
   position: fixed;
   z-index: 99;
 }
-
 
 header .container {
   padding: 1rem;
@@ -42,12 +38,11 @@ header .container {
 
 header .pageTitle {
   font-size: 4rem;
-  color:#c993f3;
+  color: #c993f3;
   font-weight: 600;
   margin: 0 auto 0 0;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
   -webkit-text-stroke: 0.5p #2c240200;
-
 }
 
 header .pageTitle > span {
@@ -59,7 +54,7 @@ header .searchForm {
   margin-right: 30px;
   display: flex;
   align-items: center;
-  background:  #B7A3EB;
+  background: #b7a3eb;
   border-radius: 4rem;
   border: 2px solid #fff;
 }
@@ -321,8 +316,6 @@ select {
   }
 }
 
-
-
 .contents #sortBy {
   background: #f2e1ff;
   margin-right: 10px;
@@ -332,7 +325,6 @@ select {
   border-radius: 0.7em;
   color: rgb(89, 87, 89);
 }
-
 
 .card {
   border-radius: 10px;
@@ -347,7 +339,6 @@ select {
   min-height: 400px;
   position: relative;
 }
-
 
 .card :hover {
   cursor: pointer;
@@ -373,7 +364,7 @@ select {
 }
 
 .card #posterImg {
-  width:100%;
+  width: 100%;
   border-radius: 10px;
   height: auto;
   position: relative;
@@ -424,7 +415,7 @@ footer {
   cursor: pointer;
 }
 
-.github-link #logo{
+.github-link #logo {
   transition-duration: 0.2s;
 }
 
@@ -433,12 +424,12 @@ footer {
   transition-duration: 0.5s;
 }
 
-.card #rating{
-  font-size: 1.em;
+.card #rating {
+  font-size: 1em;
   color: white;
   position: absolute;
-  top:2%;
-  left:78%;
+  top: 2%;
+  left: 78%;
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: 20px;
   padding: 3px 6px;
@@ -454,15 +445,14 @@ footer {
   margin-right: 10px;
 }
 
-
 @keyframes gradient {
   0% {
-   background-position: 0% 50%;
+    background-position: 0% 50%;
   }
   50% {
-   background-position: 100% 50%;
+    background-position: 100% 50%;
   }
   100% {
-   background-position: 0% 50%;
+    background-position: 0% 50%;
   }
 }

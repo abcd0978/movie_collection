@@ -4,22 +4,20 @@ export let loginBtn = () => {
   const iconClose = document.querySelector(".icon-close");
 
   btnPopup.addEventListener("click", () => {
-  wrapper.classList.add("active-popup");
+    wrapper.classList.add("active-popup");
   });
 
   iconClose.addEventListener("click", () => {
-  wrapper.classList.remove("active-popup");
+    wrapper.classList.remove("active-popup");
   });
 
   const greeting = document.querySelector("#greeting");
-  const loginForm = document.querySelector("#login-Form");
   const nicknameInput = document.querySelector("#nicknameInput");
   const loginBtn = document.querySelector("#login-btn");
 
   // string을 반복해서 사용하게 될 경우, 에러를 줄이기 위해 대문자 변수로 고정시켜준다.
   const HIDDEN_CLASSNAME = "hidden";
   const NICKNAME_KEY = "nickname";
-  const PASSWORD_KEY = "password";
 
   let onLoginClick = (event) => {
     event.preventDefault();
@@ -53,5 +51,4 @@ export let loginBtn = () => {
     // 로컬스토리지에 저장된 값을 인자로 받게 되고 paintGreetings함수를 호출한다.
     paintGreetings(savedNickname);
   }
-}
-
+};

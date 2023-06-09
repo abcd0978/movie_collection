@@ -13,14 +13,10 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
   background-color: #f6f3ef;
-  /* 밝은 배경색 */
-  /* padding-top: 20px; */
   background-image: url("https://i.ibb.co/MRqx3pc/alex-koch-v-WBGy7-Bc-AMk-unsplash.jpg");
   background-size: cover;
   background-color: repeat-y;
-  /* 이미지를 가운데로 정렬 */
 }
 
 header {
@@ -45,7 +41,7 @@ header {
   margin: 0 auto 0 0;
 }
 
-.pageTitle>a {
+.pageTitle > a {
   font-size: 4rem;
   color: #c993f3;
   font-weight: 600;
@@ -54,15 +50,15 @@ header {
   text-decoration: none;
 }
 
-.pageTitle>a>span {
+.pageTitle > a > span {
   color: #f2e1ff;
 }
 
-.headerForm>a {
+.headerForm > a {
   padding-right: 10px;
 }
 
-.headerForm>p {
+.headerForm > p {
   color: #c993f3;
   font-weight: bold;
   font-size: 1.2rem;
@@ -170,7 +166,6 @@ p {
   display: inline-block;
 }
 
-
 .actor h3 {
   padding-top: 5%;
   font-weight: bold;
@@ -180,7 +175,6 @@ p {
 .actor p {
   padding-top: 3%;
 }
-
 
 .cast-card {
   /* div class명을 cast-card로 변경함 */
@@ -197,7 +191,6 @@ p {
   display: none;
   /* Chrome/Safari/Opera에서 스크롤바 숨기기 */
 }
-
 
 .cast-card img {
   /* cast-card 안의 img를 지정함 */
@@ -280,7 +273,7 @@ p {
   height: 30px;
   padding-left: 10px;
   border-radius: 6px;
-  border: solid 2px #1E90FF;
+  border: solid 2px #1e90ff;
 }
 
 .input-container input {
@@ -289,17 +282,15 @@ p {
   margin-right: 10px;
   padding: 10px;
   box-sizing: border-box;
-  border: solid 2px #1E90FF;
+  border: solid 2px #1e90ff;
   border-radius: 5px;
   font-size: 16px;
-  resize: none; 
-
+  resize: none;
 }
 
 .textarea-container {
   margin-bottom: 10px;
   width: 1000px;
-  
 }
 
 .comment-form textarea {
@@ -307,10 +298,10 @@ p {
   height: 100px;
   padding: 10px;
   box-sizing: border-box;
-  border: solid 2px #1E90FF;
+  border: solid 2px #1e90ff;
   border-radius: 5px;
   font-size: 16px;
-  resize: none; 
+  resize: none;
 }
 
 .comment-form button {
@@ -374,7 +365,7 @@ footer {
   cursor: pointer;
 }
 
-.github-link #logo{
+.github-link #logo {
   transition-duration: 0.2s;
 }
 
