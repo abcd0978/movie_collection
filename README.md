@@ -42,4 +42,4 @@ ByteFlix 웹은 TMDB 오픈API를 활용하여 영화 제목을 기반으로 다
 #### 추가 API 요청하기 이슈
 - 현상: 기존에 요청한 ‘Top Rated’ API 데이터 속에 상세페이지에 불러오고 싶은 cast 데이터가 없는 상황
 - 원인: ‘People List’가 아닌 ‘Credits’ API에 cast 데이터가 있었음 
-- 해결책: 기존 API로 추출한 데이터, ${movieId} 값을 URL에 넣어 해당하는 영화의 cast만을 추가로 API 요청함
+- 해결책: 기존 API로 추출한 데이터, ${movieId} 값을 추가 API URL에 넣어 해당하는 영화의 cast만을 요청함
