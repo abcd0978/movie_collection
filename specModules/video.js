@@ -1,9 +1,10 @@
 /**
- * 영화id를 받아서 유튜브iframe의 HTMLElement를반환하는 함수
- * @param {string} id
+ * 영화id를 받아서 유튜브iframe HTMLElement를반환하는 함수
+ * @param {string} movieId - 영화의 id
+ * @returns {HTMLElement} - HTML엘레먼트
  */
-export async function getVideoLink(id) {
-  const url = `https://api.themoviedb.org/3/movie/${id}/videos?language=en-US`;
+export async function getVideoLink(movieId) {
+  const url = `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`;
   const options = {
     method: "GET",
     headers: {
@@ -23,7 +24,8 @@ export async function getVideoLink(id) {
 }
 /**
  * string을 받아서 html문서로 리턴하는 함수
- * @param {string} str
+ * @param {string} str - 스트링으로 작성된 html문서
+ * @returns {HTMLElement}  - HTML엘레먼트
  */
 export function stringToHTML(str) {
   let dom = document.createElement("div");
@@ -31,9 +33,13 @@ export function stringToHTML(str) {
   dom.innerHTML = str;
   return dom;
 }
-
-export async function getDetails(id) {
-  const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
+/**
+ * 영화id를 이용해, 세부정보를 json으로 리턴하는 함수
+ * @param {string} movieId - 영화의 id
+ * @returns {json}  - 영화 세부정보
+ */
+export async function getDetails(movieId) {
+  const url = `https://api.themoviedb.org/3/movie/${movieId}?language=en-US`;
   const options = {
     method: "GET",
     headers: {

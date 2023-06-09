@@ -1,3 +1,6 @@
+/**
+ * 로그인 버튼 핸들러, 로그인에 필요한 동작이 구현되어있음.
+ */
 export let loginBtn = () => {
   const wrapper = document.querySelector(".wrapper");
   const btnPopup = document.querySelector("#loginBtn");
