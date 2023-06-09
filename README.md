@@ -39,7 +39,7 @@ ByteFlix 웹은 TMDB 오픈API를 활용하여 영화 제목을 기반으로 다
 - 현상:  영화 리뷰 작성시 if 상황과 if else 상황이 동시에 적용되면서 두개의 댓글창이 생성
 - 원인: html 코드 안에서 <script> 로 JS 파일을  header 와 body 에서 모두 연결
 - 해결책: body 안에 있는  <script src="./.js" type="module"></script> 명령문을 삭제
-#### 추가 API 요청하기 이슈
+#### 등장인물(cast) 데이터 불러오기 이슈
 - 현상: 기존에 요청한 ‘Top Rated’ API 데이터 속에 상세페이지에 불러오고 싶은 cast 데이터가 없는 상황
 - 원인: ‘People List’가 아닌 ‘Credits’ API에 cast 데이터가 있었음 
 - 해결책: 기존 API로 추출한 데이터, ${movieId} 값을 추가 API URL에 넣어 해당하는 영화의 cast만을 요청함
